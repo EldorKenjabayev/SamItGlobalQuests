@@ -1,26 +1,21 @@
-import { Box } from '@mui/material'
-import './App.css'
-import ItemsList from './Components/ItemsList';
+import { Box, Button } from "@mui/material";
+import { Link } from "react-router";
 
 function App() {
-  const data = [
-    { id: 8, title: 'Eight' },
-    { id: 1, title: 'One' },
-    { id: 4, title: 'Four' },
-    { id: 2, title: 'Two' },
-    { id: 5, title: 'Five' },
-    { id: 10, title: 'Ten' },
-    { id: 6, title: 'Six' },
-    { id: 9, title: 'Nine' },
-    { id: 3, title: 'Three' },
-    { id: 7, title: 'Seven' }
-  ];
-
   return (
-    <Box>
-      <ItemsList data={data}/>
+    <Box sx={{display:'flex', gap:5}}>
+      <Link to={"quest-1"}>
+        <Button variant="contained" sx={{ width: 200, height: 50 }}>
+          Задание 1
+        </Button>
+      </Link>
+      <Link to={"quest-2"}>
+        <Button variant="contained" sx={{ width: 200, height: 50 }}>
+          Задание 2
+        </Button>
+      </Link>
     </Box>
-  )
+  );
 }
 
-export default App
+export default App;
